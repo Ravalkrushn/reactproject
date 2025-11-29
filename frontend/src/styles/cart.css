@@ -1,0 +1,240 @@
+.cart-wrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cart-container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+.cart-title {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+}
+
+/* ================================
+   CART TABLE FIXED + RESPONSIVE
+================================ */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  table-layout: fixed; /* ⭐ LONG NAME WRAPS */
+}
+
+.cart-table thead th {
+  text-align: left;
+  padding: 12px 8px;
+  background: #f4f4f4;
+  color: #555;
+}
+
+.cart-table tbody td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #eee;
+  color: #444;
+  vertical-align: middle; /* ⭐ Align center */
+}
+
+/* ⭐ PRODUCT NAME WRAPPING FIX */
+.cart-table td:nth-child(1) {
+  width: 40%;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.3;
+}
+
+/* Price column */
+.cart-table td:nth-child(2) {
+  width: 12%;
+  text-align: center;
+}
+
+/* Quantity col */
+.cart-table td:nth-child(3) {
+  width: 22%;
+  text-align: center;
+}
+
+/* Subtotal */
+.cart-table td:nth-child(4) {
+  width: 15%;
+  text-align: center;
+}
+
+/* Remove btn col */
+.cart-table td:nth-child(5) {
+  width: 15%;
+  text-align: center;
+}
+
+/* ================================
+   QUANTITY BUTTONS PERFECT ALIGN
+================================ */
+.qty-btn {
+  background: #ddd;
+  border: none;
+  padding: 6px 10px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-btn:hover {
+  background: #ccc;
+}
+
+.qty-display {
+  margin: 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ================================
+   REMOVE BUTTON
+================================ */
+.remove-btn {
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #e04343;
+}
+
+/* ================================
+   TOTAL + BUY BUTTON
+================================ */
+.cart-total {
+  text-align: right;
+  font-size: 22px;
+  color: #222;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.buy-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #28a745;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.buy-btn:hover {
+  background: #218838;
+}
+
+/* ================================
+   CHECKOUT PAGE
+================================ */
+.checkout-title {
+  margin-bottom: 16px;
+  font-size: 24px;
+  color: #333;
+}
+
+.checkout-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.checkout-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
+}
+
+.confirm-btn {
+  width: 100%;
+  background: #0b74c9;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 25px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background: #095fa6;
+}
+
+/* ================================
+   POPUP
+================================ */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-box {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 380px;
+  text-align: center;
+}
+
+.popup-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.yes-btn {
+  background: green;
+  padding: 8px 20px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.no-btn {
+  background: red;
+  padding: 8px 20px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

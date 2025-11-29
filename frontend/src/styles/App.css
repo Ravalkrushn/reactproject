@@ -1,0 +1,344 @@
+/* ======================================================
+   FIXED GLOBAL CSS — scoped so DOG page is not affected
+   ====================================================== */
+
+
+/* ======================================================
+   ORIGINAL GLOBAL STYLES (SAFE TO KEEP)
+   ====================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #CACACA;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== SCOPED HEADER (now prefixed) =====
+   These header rules will NOT run on Dog page because <html>
+   will have class 'dog-page-active' while Dog.jsx is mounted.
+*/
+html:not(.dog-page-active) header {
+  background-color: #FFD700;
+  margin-bottom: 50px;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  box-shadow: 0 10px 30px #414040;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* NAV-LINKS */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  position: relative;
+  padding: 5px;
+}
+
+.hover-effect::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: #000;
+  transition: 0.4s ease;
+}
+.hover-effect:hover::before {
+  width: 100%;
+}
+
+.icons {
+  font-size: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+/* ===== SCOPED HERO (now prefixed) =====
+   These hero styles will NOT run on Dog page.
+*/
+html:not(.dog-page-active) .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 50px;
+  background-color: #CACACA;
+  height: 90vh;
+}
+
+/* HERO TEXT */
+.hero-text {
+  color: #000;
+  width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.hero-text p {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.photo-btn {
+  background-color: #eee;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 30px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.photo-btn:hover {
+  background-color: #fff;
+  transform: translateY(-3px);
+}
+
+/* HERO IMAGE */
+html:not(.dog-page-active) .hero-img {
+  background: white;
+  border-top-left-radius: 60% 60%;
+  border-bottom-right-radius: 60% 60%;
+  overflow: hidden;
+  width: 45%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+html:not(.dog-page-active) .hero-img img {
+  width: 100%;
+  height: auto;
+}
+
+/* ===============================
+   SERVICES, FAQ, GALLERY (SAFE)
+   =============================== */
+
+.vertical-line {
+  width: 2px;
+  height: 30px;
+  background-color: black;
+}
+
+/* Services Section */
+.services-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background-color: #fff3b0;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  background-color: #00c853;
+  color: white;
+  transform: translateY(-15px);
+}
+.card .icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #00c853;
+}
+.card:hover .icon {
+  color: white;
+}
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.card p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* FAQ Section */
+.faq-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  background: #CACACA;
+  font-family: 'Roboto', sans-serif;
+  gap: 40px;
+}
+
+.faq-left {
+  flex: 1;
+}
+.faq-left h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.faq-box {
+  margin-bottom: 15px;
+}
+
+.faq-question {
+  background: #ffe066;
+  border: none;
+  padding: 12px 18px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+.faq-question:hover {
+  background: #ffcd00;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 15px;
+  background: #f8f8f8;
+  margin-top: 5px;
+  border-left: 3px solid #ffe066;
+  border-radius: 4px;
+}
+
+.faq-right {
+  flex: 1;
+}
+
+.video-thumbnail {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.video-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 15px;
+}
+thumbnail-row img {
+  width: 48%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Gallery Section */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+#name-photos {
+  font-size: 36px;
+  text-transform: lowercase;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+#name-photos::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 3px;
+  background-color: white;
+  margin: 8px auto 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+.image-box {
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+.image-box:hover {
+  transform: scale(1.03);
+}
+.image-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+}
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

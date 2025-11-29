@@ -1,0 +1,103 @@
+.profile-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #fff985, #9ea6ff);
+}
+
+.profile-card {
+  width: 420px;
+  padding: 35px;
+  background: #ffffffee;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.profile-card h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #333;
+  font-weight: 600;
+}
+
+.msg {
+  background: #f0f0f0;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  color: #333;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  margin-bottom: 10px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #f9c806;
+  box-shadow: 0 0 5px #f9c806;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.save-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.cancel-btn {
+  background: #ff4e4e;
+  color: white;
+}
+
+.save-btn:hover {
+  background: #43a047;
+}
+
+.cancel-btn:hover {
+  background: #f44336;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

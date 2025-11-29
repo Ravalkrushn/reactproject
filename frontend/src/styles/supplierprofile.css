@@ -1,0 +1,64 @@
+.supplier-profile-page {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 120px; /* Navbar se neeche */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: linear-gradient(120deg, #fff6a9, #c7ccff);
+}
+
+.supplier-profile-card {
+  width: 450px;
+  padding: 30px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.supplier-profile-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.supplier-profile-card input {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 16px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.save-btn {
+  background: #28a745;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel-btn {
+  background: #dc3545;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.msg {
+  text-align: center;
+  color: #555;
+  font-weight: 600;
+  margin-bottom: 15px;
+}

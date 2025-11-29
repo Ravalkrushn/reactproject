@@ -1,0 +1,166 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+body {
+  background-color: #070707;
+  min-height: 100vh;              /* पूरी स्क्रीन */
+  display: flex;
+  justify-content: center;        /* X axis center */
+  align-items: center;            /* Y axis center */
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.login-box {
+  display: flex;
+  width: 900px;
+  height: 470px;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.60);
+  position: absolute;             
+  top: 50%;                       
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Left Section */
+.left-side {
+  flex: 1;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo1{
+  width: 50px;    
+  height: auto;    
+  margin-bottom: 50px;
+  background-color: #333;
+}
+
+
+h2 {
+  margin-bottom: 2px;
+  font-weight: 600;
+  text-align: center;
+  margin-right: 40px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: none;
+  background-color: #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Password Container */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container .input-box {
+  padding-right: 45px; /* Eye ke liye space */
+}
+
+.eye-icon {
+  position: absolute;
+  top: -30px;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 22px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.eye-icon:hover {
+  opacity: 1;
+}
+
+/* Forgot Password */
+.forgot {
+  align-self: flex-start;
+  font-size: 14px;
+  color: black;
+  margin-top: 5px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  margin-top: 20px;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f5b500;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+iski jo size ko choti kar ni hai
+
+.login-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Signin Section */
+.signin {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.signin a {
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.signin a:hover {
+  text-decoration: underline;
+}
+
+.signup span {
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+/* Right Section */
+.right-side {
+  flex: 1;
+  background-color: #f5b500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

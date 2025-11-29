@@ -1,0 +1,244 @@
+/* ===== General Styling ===== */
+.supplier-panel {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  scroll-behavior: smooth;
+}
+
+/* ===== Navbar ===== */
+.supplier-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffd000;
+  padding: -5px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.supplier-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.supplier-logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.supplier-brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: #000;
+  padding-top: 50px;
+ 
+}
+
+.supplier-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+}
+.supplier-nav-links button,
+.supplier-nav-links a {
+  background: transparent;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px; 
+}
+
+.supplier-nav-links button:hover,
+.supplier-nav-links a:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.supplier-nav-links button.active,
+.supplier-nav-links a.active {
+  background-color: transparent !important;
+  border-radius: 6px !important;
+}
+
+.logout-btn {
+  background-color: red !important;
+  color: white !important;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #c70000;
+}
+
+/* ===== Hero ===== */
+.supplier-hero {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.supplier-hero-img {
+  max-width: 60%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.supplier-welcome {
+  margin-top: 50px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ===== Overview Section ===== */
+.supplier-overview-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.supplier-overview-card {
+  background: white;
+  border-radius: 12px;
+  width: 75%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overview-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #e60073;
+}
+
+.overview-text {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===== Request Product Form ===== */
+.form-card {
+  background: #fff;
+  padding: 25px;
+  margin: 30px auto;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h4 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-card textarea {
+  resize: none;
+}
+
+.submit-btn {
+  background-color: #ffd000;
+  border: none;
+  padding: 10px 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #e6b800;
+}
+
+/* ===== Success Modal ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px 40px;
+  border-radius: 10px;
+  text-align: center;
+  animation: pop 0.3s ease;
+}
+
+.success-icon {
+  font-size: 40px;
+  color: green;
+  margin-bottom: 10px;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===== Orders Table ===== */
+.section-title {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.orders-table-container {
+  width: 90%;
+  margin: 20px auto;
+  overflow-x: auto;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.orders-table th {
+  background: #ffd000;
+  padding: 12px;
+  font-weight: 700;
+  border: 1px solid #ddd;
+}
+
+.orders-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}

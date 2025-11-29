@@ -1,0 +1,10 @@
+.footer-nav {
+  width: 100%;
+  padding: 25px 0;
+  background: #FFE01B;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  margin-top: 40px;
+  border-top: 2px solid #f2cb00;
+}

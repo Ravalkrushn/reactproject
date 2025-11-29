@@ -1,0 +1,27 @@
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #print-area, #print-area * {
+    visibility: visible !important;
+  }
+
+  #print-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    padding: 10px;
+  }
+
+  /* Sidebar aur topbar print me hide */
+  .pk-sidebar, .pk-topbar {
+    display: none !important;
+  }
+
+  /* Scroll hatana */
+  #report-print-area {
+    display: none !important; /* Buttons print nahi honge */
+  }
+}

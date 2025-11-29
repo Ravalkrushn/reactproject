@@ -1,0 +1,338 @@
+/* ================================
+   ADMIN DASHBOARD – Modern UI (Screenshot Match)
+   Filename: AdminGallery.css
+   ================================ */
+
+/* PAGE STRUCTURE */
+.pk-admin-shell {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: #f4f7fc;
+  overflow: hidden;
+}
+
+/* ================================
+   TOP NAVBAR
+   ================================ */
+.pk-topbar {
+  width: 100%;
+  height: 65px;
+  background: #243242;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.18);
+}
+
+.pk-menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pk-topbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 15px;
+}
+
+.pk-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.pk-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* ================================
+   SIDEBAR
+   ================================ */
+.pk-sidebar {
+  width: 250px;
+  background: #1f2b38;
+  height: 100vh;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  transition: 0.3s ease-in-out;
+  padding-top: 20px;
+  color: #f0f4fa;
+  overflow-y: auto;
+  box-shadow: 3px 0 8px rgba(0,0,0,0.25);
+}
+
+.pk-sidebar.closed {
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pk-side-head {
+  padding-left: 20px;
+  margin-top: 60px;
+}
+
+.pk-side-head h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.pk-side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pk-side-item {
+  padding: 14px 20px;
+  border: none;
+  background: none;
+  color: #cbd5e1;
+  text-align: left;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border-radius: 6px;
+}
+
+.pk-side-item:hover,
+.pk-side-item.active {
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+.logout {
+  margin-top: 15px;
+  background: rgba(255,120,120,0.2) !important;
+  color: #ffb4b4 !important;
+}
+
+.pk-side-spacer {
+  flex: 1;
+}
+
+/* ================================
+   MAIN CONTENT AREA
+   ================================ */
+.pk-main {
+  flex: 1;
+  padding: 90px 40px;
+  margin-left: 250px;
+  transition: 0.3s;
+  
+  height: 100vh;       /* pura screen */
+  overflow-y: auto;    /* scroll enable */
+  padding-bottom: 50px; /* neeche space (optional) */
+
+}
+
+.pk-main.full {
+  margin-left: 0;
+}
+
+.pk-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* ================================
+   STAT CARDS
+   ================================ */
+.pk-cards {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.pk-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  text-align: center;
+  transition: 0.25s ease-in-out;
+}
+
+.pk-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.17);
+}
+
+.pk-card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.pk-card-value {
+  margin-top: 10px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* ================================
+   ACTION CARDS
+   ================================ */
+.pk-actions {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.pk-action-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.14);
+}
+
+.pk-action-card.small {
+  padding: 20px;
+}
+
+.pk-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.pk-act {
+  padding: 12px;
+  border-radius: 8px;
+  background: #f3f4f6;
+  border: 1px solid #dbe1e7;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pk-act:hover {
+  background: #e5e7eb;
+}
+
+.pk-activity {
+  margin: 10px 0 0;
+  list-style: none;
+  padding: 0;
+  color: #475569;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+   ================================ */
+@media (max-width: 980px) {
+  .pk-sidebar {
+    top: 65px;
+  }
+  .pk-main {
+    margin-left: 0 !important;
+  }
+  .pk-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .pk-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .pk-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.supplier-page {
+  padding: 30px;
+}
+
+/* Scrollable table container for Supplier, Customer, Product Requests */
+.supplier-table-container {
+  max-height: 70vh;        /* table fixed height */
+  overflow-y: auto;        /* vertical scroll */
+  overflow-x: auto;        /* horizontal scroll (mobile fix) */
+  border-radius: 10px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.supplier-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.supplier-table th {
+  padding: 12px;
+  background: #1c2e4a;
+  color: white;
+  text-align: left;
+}
+
+.supplier-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.delete-btn {
+  color: red;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.pk-report-wrapper {
+  padding: 20px;
+}
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 20px;
+}
+
+.report-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+.supplier-report-title {
+  padding-top: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.supplier-report-title1 {
+  padding-top: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000000;
+}
+
+
+.supplier-report-title2 {
+  padding-top: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+ 
+    width: "320px";    
+    height: "320px" ;   
+    margin: "0 auto";  
+ 
+
+}
+

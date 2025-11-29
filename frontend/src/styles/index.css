@@ -1,0 +1,606 @@
+/* ========== Reset & Base Styles ========== */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* ========== Navbar ========== */
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background: #FFE01B;
+  padding: 15px 60px;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.brand {
+  font-size: 20px;
+  margin-bottom: -5px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* ========== Nav Links ========== */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c3e50;
+  padding: 6px 4px;
+  background: #FFE01B;
+  border: none;
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Category button reset */
+.nav-links button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 6px 4px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c3e50;
+  cursor: pointer;
+}
+
+/* Hover underline effect */
+.nav-links button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #e74c3c;
+  transition: width 0.3s ease;
+}
+
+.nav-links button:hover::after {
+  width: 100%;
+}
+
+/* Dropdown (click controlled) */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #ffffff;
+  border-radius: 6px;
+  list-style: none;
+  padding: 8px 0;
+  min-width: 150px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 15px;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #fdd20a;
+  color: #000;
+}
+
+/* Search Bar */
+.search-bar {
+  width:200px ;
+  padding: 8px 14px ;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 6px rgba(231, 76, 60, 0.4);
+}
+
+/* Right Section (Cart + Account) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart {
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-icon {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+.vertical-line{ 
+  width:2px; height:25px; background:#000;
+}
+
+/* Account & Dropdown */
+.account-dropdown {
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  width: 160px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.account-dropdown button {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.account-dropdown button:hover {
+  background: #fdd20a;
+}
+
+.user-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fffcfc0d;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 520px;
+  padding: 160px 40px;
+  gap: 40px;
+  background: #fdfdfd;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #555;
+  max-width: 600px;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Services (Infinite horizontal scroll) ========== */
+/* Container hides native scrollbar and centers content */
+.services-section.infinite-scroll {
+  width: 100%;
+  padding: 200px 20px;
+  background-color: #f9f9f9;
+  overflow: hidden; /* hide native scrollbar */
+  box-sizing: border-box;
+}
+
+/* Track is a long row that will animate leftwards */
+.services-section .scroll-track {
+  display: flex;
+  gap: 24px;
+  align-items: stretch;
+  /* Make track wide enough and animate translateX */
+  animation: scroll-left 18s linear infinite;
+  will-change: transform;
+  padding: 10px 0;
+}
+
+/* pause animation when hovering */
+.services-section.infinite-scroll:hover .scroll-track {
+  animation-play-state: paused;
+}
+
+/* Individual service card - make sure text wraps and no overlap */
+.service-card {
+  min-width: 300px;        /* stable width to avoid overlap */
+  max-width: 320px;
+  flex: 0 0 320px;         /* don't shrink */
+  background: #fff;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.service-card .icon {
+  font-size: 2.1rem;
+}
+
+/* Title and paragraph wrap nicely */
+.service-card h2 {
+  font-size: 18px;
+  margin: 0;
+  color: #222;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Animation: move whole track leftwards */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* because content duplicated, move by half */
+  }
+}
+
+/* Make sure duplication doesn't create gaps on different widths */
+.services-section .scroll-track > .service-card:last-child {
+  margin-right: 40px;
+}
+
+/* ========== FAQ Section (Accordion) ========= */
+.faq-video-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 20px;
+}
+
+.faq-left { flex: 1; min-width: 300px; }
+.faq-right { flex: 1; min-width: 300px; display: flex; justify-content: center; }
+
+.accordion .faq-box {
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 14px 18px;
+  background: linear-gradient(90deg,#fff,#fff);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.faq-question .faq-icon {
+  font-size: 18px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 18px;
+  transition: max-height 0.32s ease, padding 0.32s ease;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.faq-answer.visible {
+  padding: 12px 18px 18px 18px;
+  max-height: 480px; /* big enough for content */
+}
+
+/* ========== Photos Section ========== */
+.photos-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9; 
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 20px;
+  justify-items: center;
+}
+
+.photos-grid img {
+  width: 80%;      /* keep consistent */
+  border-radius: 10px;
+  border: 4px solid #000;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.photos-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  border-color: #fff717;
+}
+
+.vertical-line1{
+  width: 190px;
+  height: 4px;
+  background-color: #ff9800;
+  border: none;
+  border-radius: 4px;
+  margin: -45px auto 20px 660px;
+}
+
+/* Services Section (grid) */
+#services {
+  padding: 65px 20px 100px ;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.services-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.services-line {
+  width: 250px;
+  height: 4px;
+  background: #ff9800;
+  border: none;
+  margin: 0 auto 20px auto;
+  border-radius: 2px;
+}
+
+.services-subtext {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.services-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  justify-items: center;
+}
+
+.card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+/* About Section */
+.about-us-section {
+  padding: 60px 20px;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+
+.about-us-container h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.about-us-line {
+  width: 150px;
+  height: 3px;
+  background-color: #ff9800;
+  border: none;
+  margin: 10px auto 30px auto;
+}
+
+.about-us-text {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Circle Images */
+.about-us-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.circle-image {
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.circle-image.small {
+  width: 100px;
+  height: 100px;
+}
+
+.circle-image.large {
+  width: 140px;
+  height: 140px;
+}
+
+/* ========== Floating Scroll-to-top Button ========= */
+.scroll-top-btn {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: #ff9800;
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+  cursor: pointer;
+  transform: translateY(20px) scale(0.95);
+  opacity: 0;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+  z-index: 1200;
+}
+
+.scroll-top-btn.show {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .services-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .photos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .scroll-track {
+    animation-duration: 22s;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links { display: none; } /* simplify mobile nav - you can add a hamburger later */
+  .hero-text h1 { font-size: 28px; }
+  .hero-image img { max-width: 320px; }
+  .service-card { min-width: 240px; flex: 0 0 240px; max-width: 260px; }
+}
